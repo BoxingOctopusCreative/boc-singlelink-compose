@@ -1,10 +1,11 @@
-version: '3.1'
+version: '3.9'
 
 services:
   singlelink:
     ports:
       - 3000:3000
     image: jimbisenius/singlelink:latest
+    restart: unless-stopped
     labels:
       - com.centurylinklabs.watchtower.enable=true
       - traefik.enable=true
